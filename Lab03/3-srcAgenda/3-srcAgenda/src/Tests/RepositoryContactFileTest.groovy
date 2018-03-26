@@ -17,8 +17,8 @@ class RepositoryContactFileTest extends GroovyTestCase {
 
             if(repc.count()!=2) assert false
         }
-        catch (InvalidFormatException ignored){
-            assert false
+        catch (InvalidFormatException e){
+
         }
     }
 
@@ -28,7 +28,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("123.23","12412","asdasdasd","asd@asd@asd.asd"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
@@ -39,7 +39,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("","asd","09876543456","asd@asd@asd.asd"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
@@ -50,7 +50,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("nume2","adresa2","",""))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
@@ -62,8 +62,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
             repc.addContact(new Contact("M","ceva adresa","0123123123","ceva@ceva.ceva"))
             if(repc.count()!=1) assert false
         }
-        catch (InvalidFormatException ignored){
-            assert false
+        catch (InvalidFormatException e){
         }
     }
 
@@ -116,7 +115,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("Nume","","0123123123","ceva@ceva.ceva"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
 
         }
@@ -130,8 +129,8 @@ class RepositoryContactFileTest extends GroovyTestCase {
             if(repc.count()!=1) assert false
 
         }
-        catch (InvalidFormatException ignored){
-            assert false
+        catch (InvalidFormatException e){
+
         }
     }
 
@@ -185,7 +184,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
             repc.addContact(new Contact("Nume","ceva adresa","0000000000","ceva@ceva.ceva"))
             if(repc.count()!=1) assert false
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
 
         }
     }
@@ -196,7 +195,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("Nume","ceva adresa","999999999","ceva@ceva.ceva"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
@@ -208,7 +207,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
             repc.addContact(new Contact("Nume","ceva adresa","0000000001","ceva@ceva.ceva"))
             if(repc.count()!=1) assert false
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
 
         }
     }
@@ -220,7 +219,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
             repc.addContact(new Contact("Nume","ceva adresa","0999999998","ceva@ceva.ceva"))
             if(repc.count()!=1) assert false
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
         }
     }
 
@@ -230,7 +229,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("Nume","ceva adresa","1000000000","ceva@ceva.ceva"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
@@ -242,7 +241,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
             repc.addContact(new Contact("Nume","ceva adresa","0999999999","ceva@ceva.ceva"))
             if(repc.count()!=1) assert false
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
         }
     }
 
@@ -252,7 +251,7 @@ class RepositoryContactFileTest extends GroovyTestCase {
         try{
             repc.addContact(new Contact("Nume","ceva adresa","0999999999","E"))
         }
-        catch (InvalidFormatException ignored){
+        catch (InvalidFormatException e){
             if(repc.count()!=0) assert false
         }
     }
